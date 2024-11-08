@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-
 /*
+Harjoituksen ohjeet: https://peatutor.com/cplus/harjoitukset/h1.php
 Vaihe 1. Kysy luvut ja tallenna ne muuttujiin a ja b. Käytä cin ja cout olioita.
 
 Vaihe 2. Lisää sovellukseen summan ja osamäärän laskemiseen ja tulostamiseen käytettävät funktiot.
