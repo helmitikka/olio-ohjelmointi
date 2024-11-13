@@ -39,15 +39,32 @@ Vaihe 3: Student-luokka
 */
 
 #include <iostream>
-#include "Car.h"
+#include "Car.h" // Car-luokan määrittelyt
+#include "Rectangle.h" // Rectangle-luokan määrittelyt
 using namespace std;
 
-int main() {
-    Car myCar;
-    myCar.setBrand("Chevrolet");
-    myCar.setModel("Kalos");
-    myCar.setYearModel(2005);
-    myCar.printData();
+int main()
+{
+    // Vaihe 1. Car-luokka
+
+    Car myCar;                      // Luodaan Car-olio pinomuistiin
+    myCar.setBrand("Chevrolet");    // Asetetaan auton merkki
+    myCar.setModel("Kalos");        // Asetetaan auton malli
+    myCar.setYearModel(2005);       // Asetetaan auton valmistusvuosi
+    myCar.printData();              // Kutsutaan funktiota, joka tulostaa auton tiedot
+
+
+    //Vaihe 2. Rectangle-luokka
+
+    Rectangle *rectanglePtr = new Rectangle;    // Luodaan dynaaminen Rectangle-olio kekomuistiin osoittimen avulla, tuhotaan myöhemmin
+    rectanglePtr->setWidth(6.25);               // Asetetaan leveys
+    rectanglePtr->setHeight(8.50);              // Asetetaan korkeus
+
+    cout << "Suorakulmion pinta-ala: " << rectanglePtr->getArea() << endl;      // Tulostetaan pinta-ala
+    cout << "Suorakulmion ympärysmitta: " << rectanglePtr->getCircum() << endl; // Tulostetaan ympärysmitta
+
+    delete rectanglePtr;  // Tuhotaan olio ja vapautetaan kekomuisti
+    rectanglePtr = nullptr; // Nollataan osoitin
 
     return 0;
 }
