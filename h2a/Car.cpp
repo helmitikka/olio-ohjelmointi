@@ -1,10 +1,11 @@
 #include "Car.h" // Car-luokan määrittelyt
 #include <iostream>
+
 using namespace std;
 
 void Car::printData() const          // tulostaa auton merkin, mallin ja valmistusvuoden.
 {
-    cout << "merkki: " << brand << ", malli: " << model << ", valmistusvuosi: " << yearModel << endl;
+    cout << "Auton tiedot: " << brand << " " << model << " " << yearModel << endl;
 }
 
 void Car::setBrand(string brandName) // asettaa auton merkin
