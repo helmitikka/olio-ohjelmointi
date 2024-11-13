@@ -39,14 +39,14 @@ Vaihe 3: Student-luokka
 */
 
 #include <iostream>
-#include "Car.h"
+#include "Car.h" // Car-luokan määrittelyt
 using namespace std;
 
 int main() {
-    Car myCar;
-    myCar.setBrand("Chevrolet");
-    myCar.setModel("Kalos");
-    myCar.setYearModel(2005);
+    Car myCar;                      // Luodaan myCar-olio
+    myCar.setBrand("Chevrolet");    // Asetetaan auton merkki (Chevrolet)
+    myCar.setModel("Kalos");        // Asetetaan auton malli (Kalos)
+    myCar.setYearModel(2005);       // Asetetaan auton val
     myCar.printData();
 
     return 0;
