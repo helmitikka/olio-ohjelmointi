@@ -2,7 +2,8 @@
 #include <iostream>
 
 // Virtuaalisen metodin callOut toteutus kantaluokassa
-void Animal::callOut() const {
+void Animal::callOut() const
+{
     cout << "Elain aantelee." << endl;
 }
 
