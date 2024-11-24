@@ -1,8 +1,7 @@
 #include "chef.h"
 #include <iostream>
 
-
-Chef::Chef(const string chefName) : name(chefName)     // Chef-luokan kontruktori, parametreinä kokin nimi
+Chef::Chef(const string chefName) : name(chefName) // Chef-luokan kontruktori, parametrinä kokin nimi
 {
     cout << "Chef " << name << " kontruktori" << endl; // tulostaa tiedon konstruktorista
 }

@@ -11,7 +11,7 @@ public:
     Chef(string chefName);  // Konstruktori, joka alustaa kokin nimen
     void makeSalad();       // Salaatin valmistusfunnktio
     void makeSoup();        // Keiton valmistusfunktio
-    ~Chef();                // Dekonstruktori, joka tuhoaa olion
+    ~Chef();                // Destruktori, joka tuhoaa olion
 };
 
 #endif // CHEF_H

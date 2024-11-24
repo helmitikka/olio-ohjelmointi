@@ -1,7 +1,7 @@
 #include "italianchef.h"
 #include <iostream>
 
-ItalianChef::ItalianChef(string chefName) : Chef(chefName)  // ItalianChef-luokan kontruktori, parametreinä kokin nimi
+ItalianChef::ItalianChef(string chefName) : Chef(chefName)  // ItalianChef-luokan kontruktori, parametrinä kokin nimi
 {                                                           // Koska Chef-luokan muodostin ottaa parametrin, on kutsuttava ItalianChef luokan konstruktorissa tuota muodostinta
     cout << "ItalianChef " << name << " konstruktori" << endl; // tulostaa tiedon konstruktorista
 }
