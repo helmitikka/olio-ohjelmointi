@@ -1,12 +1,13 @@
-/*
-Ohjeet: https://peatutor.com/cplus/harjoitukset/h5.php
-*/
+// Ohjeet: https://peatutor.com/cplus/harjoitukset/h5.php
 #include <iostream>
 #include "associationa.h"
+#include "aggregationa.h"
 using namespace std;
 
 int main()
 {
+    // Vaihe 1
+
     // Luodaan muuttujat int a ja b, arvoiksi annetaan 5 ja 10
     int a = 5;
     int b = 10;
@@ -44,6 +45,7 @@ int main()
 
     cout << endl;
 
+
  /*
     // Kokeillaan, voidaanko muuttaa refA osoittamaan b:n osoitteeseen
     int& refA = &b;
@@ -52,6 +54,10 @@ int main()
     // main.cpp:47:10: Redefinition of 'refA'
     // main.cpp:38:10: previous definition is here
  */
+
+
+    // Vaihe2(Assosiation)
+    // kun oliolle A annetaan kopio oliosta B, niin A ei voi vaikuttaa olion B dataan.
 
     ClassB objB;
     objB.setInfo("Olion B asettama info");
@@ -63,7 +69,19 @@ int main()
     cout<<"objB: "<<objB.getInfo()<<endl;
     cout<<"objAss: "<<objAss.getBinfo()<<endl;
 
+    cout << endl;
+
+    // Vaihe3(Aggregation)
+    // Jos oliolle A annetaan referenssinä olion B osoite, niin A:n muokkaus muuttaa B:n dataa.
+
+    cout<<"Aggregaatio esimerkki:"<<endl;
+    ClassB &refB=objB;
+    AggregationA objAggr(refB);
+    objAggr.setBinfo("Olion Agr asettama info");
+    cout<<"objB: "<<objB.getInfo()<<endl;
+    cout<<"objAggr "<<objAggr.getBinfo()<<endl;
+    cout<<endl;
+
+
     return 0;
 }
-
-
