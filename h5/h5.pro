@@ -4,10 +4,12 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        association.cpp \
+        aggregationa.cpp \
+        associationa.cpp \
         classb.cpp \
         main.cpp
 
 HEADERS += \
-    association.h \
+    aggregationa.h \
+    associationa.h \
     classb.h
