@@ -1,9 +1,15 @@
-#include <iostream>
+// Ohjeet: https://peatutor.com/cplus/harjoitukset/h6a.php
 
-using namespace std;
+#include <QCoreApplication>
+#include "myclass.h"
 
-int main()
+int main(int argc, char *argv[])
 {
-    cout << "Hello World!" << endl;
-    return 0;
+    QCoreApplication a(argc, argv);
+
+    MyClass myObject; // luodaan MyClass-olio
+
+    myObject.raiseMySignal(); // kutsutaan metodi
+
+    return a.exec();
 }
