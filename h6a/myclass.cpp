@@ -1,12 +1,12 @@
 #include "myclass.h"
 
 MyClass::MyClass(QObject *parent) : QObject(parent) {
-    connect(this, SIGNAL(mySignal()), this, SLOT(mySlot()));
+    connect(this, SIGNAL(mySignal()), this, SLOT(mySlot())); // mySignal kytketään slottiin mySLOT
 }
 
 void MyClass::raiseMySignal()
 {
-    emit mySignal();
+    emit mySignal(); // lauseella emit mySignal(); "nostetaan" mySignal niminen signaali
 }
 
 void MyClass::mySlot()
